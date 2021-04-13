@@ -1,0 +1,26 @@
+.cardsBtcmp {
+  height: 300px;
+  width: 300px;
+  margin: 15px;
+}
+
+.BtcmpCardStudent {
+  width: 300px;
+  margin: 15px;
+}
+
+.BtcmpImg {
+  margin-top: 10px;
+  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.BtcmpCardBody {
+  padding-left: 100px;
+}
+
+.btn-outline-danger,
+.btn-outline-info {
+  width: 100px;
+}

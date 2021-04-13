@@ -1,0 +1,19 @@
+.u {
+  
+}
+
+.addAndSearch {
+  display: flex;
+}
+
+.srchBarUser {
+  position: relative;
+  width: 955px;
+  margin-left: 220px;
+}
+
+.usersList {
+  padding-left: 385px;
+  flex-wrap: wrap;
+  display: flex;
+}

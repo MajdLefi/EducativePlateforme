@@ -1,0 +1,260 @@
+.homeContainer {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+.homebg {
+  background: url("https://images.unsplash.com/photo-1462536943532-57a629f6cc60?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80");
+  width: 100%;
+  height: 40vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+}
+
+.homeSlogan {
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  font-size: 2.625rem;
+}
+
+.homeDesc {
+  text-align: center;
+  font-size: 1.3125rem;
+  color: white;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-center2 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.flex-center3 {
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sloganContainer {
+  font-size: 1.125rem;
+  font-family: "Times New Roman", Times, serif;
+  justify-content: space-around;
+  color: crimson;
+  margin-top: 0;
+  width: 100%;
+  height: 9vh;
+  background-color: #121921;
+}
+
+.carouselContainer {
+  margin-top: 20px;
+  z-index: 1000;
+  height: 600px;
+}
+
+.btcmpText {
+  text-align: center;
+}
+.carouselHome {
+  margin-left: 620px;
+  padding-right: 100px;
+  width: 700px;
+  height: 90vh;
+}
+.imgCarou {
+}
+
+.btcmpText {
+  margin: 15px;
+}
+
+.btnBtcmpHome {
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnHome {
+  display: inline-block;
+  justify-content: center;
+  margin-left: 260px;
+  border-radius: 20px;
+  background-color: crimson;
+  color: white;
+  width: 150px;
+  list-style-type: none;
+  text-align: center;
+  height: 40px;
+  border: none;
+  text-decoration: bold;
+}
+
+.reviewsContainer {
+  margin-top: 20px;
+  border: solid 1px greenyellow;
+  height: 350px;
+  text-align: center;
+}
+
+.reviewText {
+  text-align: center;
+}
+
+.reviewCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviewCard {
+  width: 400px;
+  height: 200px;
+  margin: 15px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.imgReview {
+  padding-left: 15px;
+  width: 140px;
+  height: 110px;
+  border-radius: 250px;
+}
+
+.imgReviewContainer {
+  display: inline-flex;
+}
+
+.followUsContainer {
+  margin-top: 20px;
+  border: solid 1px red;
+  height: 200px;
+}
+
+.followUsText {
+  text-align: center;
+}
+
+.followUsItems {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.followUsItems {
+  width: 100%;
+  height: auto;
+  border-radius: 200%;
+  margin: auto;
+  padding: 20px;
+}
+
+.followUsItems ul {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.followUsItems ul li {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background: #b2d8d8;
+  border-radius: 100px;
+  margin: 0px 10px;
+}
+
+.followUsItems ul li a {
+  padding-top: 20px;
+  display: block;
+  color: #fff;
+  font-size: 40px;
+}
+
+/* .followUcItems ul li:nth-child(1) {
+  background: #3b5999;
+}
+
+.followUcItems ul li:nth-child(2) {
+  background: #1cd82c;
+}
+
+.followUcItems ul li:nth-child(3) {
+  background: #1cd82c;
+}
+
+.followUcItems ul li:nth-child(4) {
+  background: #1cd82c;
+} */
+
+.footerContainer {
+  color: rgba(255,255,255,.7);
+  margin-top: 20px;
+  border: solid 1px greenyellow;
+  height: 450px;
+  background-color: #121921;
+}
+
+.aboutUsContainer {
+  border: solid 1px rgb(50, 47, 255);
+  display: flex;
+  margin-left: 600px;
+}
+
+.imgFooter {
+  width: 350px;
+  height: 200px;
+}
+
+.iconsFooter ul li {
+  display: inline-block;
+  margin: 15px;
+  margin-left: 5px;
+}
+
+.followUsFooter {
+  display: flex;
+  border: solid 1px rgb(255, 61, 47);
+}
+
+.followUsTxt {
+  color: #fff;
+  padding-top: 11px;
+}
+
+.aboutUsContainer,
+.contactUsFooterContainer {
+  display: inline-block;
+}
+
+.contactUsFooterContainer {
+  border: solid 1px rgb(255, 47, 151);
+  margin: 150px;
+  padding-top: 150px;
+} 
+.contactUsFooterContainer li {
+  list-style: none;
+} 
+
+.contactUsText {
+  color: #fff;
+  padding-left: 35px;
+}
+
+.contactUsIcons {
+  padding-right: 20px;
+}

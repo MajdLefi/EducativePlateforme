@@ -1,0 +1,18 @@
+.btcmpCardStudent {
+  height: 300px;
+  width: 300px;
+  margin: 15px;
+}
+
+.btcmpImg {
+  margin-top: 10px;
+  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.btcmpsList {
+  padding-left: 385px;
+  flex-wrap: wrap;
+  display: flex;
+}

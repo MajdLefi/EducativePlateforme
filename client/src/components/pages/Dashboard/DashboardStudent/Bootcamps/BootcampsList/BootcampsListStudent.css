@@ -1,0 +1,10 @@
+.searchBar {
+  padding-left: 650px;
+  width: 1500px;
+}
+
+.btcmpsListStudent {
+  padding-left: 385px;
+  flex-wrap: wrap;
+  display: flex;
+}

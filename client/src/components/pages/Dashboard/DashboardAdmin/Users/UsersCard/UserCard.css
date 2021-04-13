@@ -1,0 +1,23 @@
+.UserCardStudent {
+  height: 300px;
+  width: 300px;
+  margin: 15px;
+}
+
+.UserImg {
+  margin-top: 10px;
+  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.btnsUserContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.deleteUserBtn{
+  margin-right: 10px;
+}
+
+

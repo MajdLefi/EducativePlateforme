@@ -1,0 +1,98 @@
+.authPageContainer {
+  background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80");
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 5s;
+}
+
+.slidebar {
+  width: 430px;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: white;
+  transform: translate(0);
+  transition: all 5s;
+}
+
+.slidebarAuthActive {
+  transform: translateX(-100%);
+  transition: translateX 0.5s linear;
+}
+
+.registerbar {
+  display: none;
+  transition: translateX 0.5s linear;
+}
+
+.registerbarActive {
+  width: 430px;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: white;
+  transition: translateX 0.5s linear;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.authInput form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputEmail {
+  padding: 10px;
+  margin: 30px;
+  font-size: 16px;
+  width: 70%;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 2px solid gray;
+}
+
+.inputEmail:focus {
+  border-bottom: 2px solid rgb(114, 114, 206);
+}
+
+.btnAuth {
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  width: 70%;
+  color: white;
+  background-color: crimson;
+  border: none;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+.btnAuth:active {
+  background-color: cadetblue;
+}
+
+.authContainer {
+  margin: 28px;
+}
+
+.authContainer p {
+  margin-left: 65px;
+}
+
+.registerLink {
+  font-weight: 600px;
+  color: crimson;
+}

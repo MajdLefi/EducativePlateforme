@@ -1,0 +1,53 @@
+.headerContainer {
+  z-index: 1;
+  position: -webkit-sticky;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 7vh;
+  background-color: teal;
+  color: white;
+}
+
+.navbarItems ul {
+  margin-left: 1500px;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+}
+
+.navbarItems ul li {
+  padding: 5px;
+}
+
+a{
+  color: white;
+}
+a :hover {
+  color: white;
+  text-decoration: none !important;
+}
+
+.btncnx {
+  margin-left: 20px;
+  border-radius: 15px;
+  background-color: crimson;
+}
+
+.btncnx a {
+  padding: 10px;
+}
+
+#iconBtnCnx {
+  padding: 3.5px;
+}
+
+.navItem {
+  text-decoration: bold;
+}

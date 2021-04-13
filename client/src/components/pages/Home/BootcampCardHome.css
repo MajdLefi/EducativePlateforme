@@ -1,0 +1,21 @@
+.courseCrdHome {
+  background-color: white;
+  border: 0.5px rgb(83, 36, 72) solid;
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+}
+
+.imgCard {
+  margin-top: 20px;
+  margin-left: 150px;
+}
+
+.btcmpCtgry {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.btcmpTitle {
+  text-align: center;
+}

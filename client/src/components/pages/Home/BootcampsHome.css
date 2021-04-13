@@ -1,0 +1,70 @@
+.btcmpsContainer {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+.btcmpsBckPage {
+  background: url("https://images.unsplash.com/photo-1548131089-d5d36b219767?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+  width: 100%;
+  height: 49vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+}
+
+.homeSlogan {
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  font-size: 2.625rem;
+}
+
+.sloganContainer2 {
+  font-size: 1.125rem;
+  font-family: "Times New Roman", Times, serif;
+  justify-content: space-around;
+  color: white;
+  margin-top: 0;
+  width: 100%;
+  height: 5.5vh;
+  background-color: rgba(220, 20, 60, 0.712);
+}
+
+.btcmpsListContainer {
+  display: flex;
+  width: 100%;
+  height: 1200px;
+  border: 0.5px rgb(105, 145, 255) solid;
+}
+
+
+.filtersContainer {
+  background-color: white;
+  display: flex;
+  margin-top: 50px;
+  margin-left: 300px;
+  width: 300px;
+  height: 700px;
+  border: 0.5px rgb(148, 255, 105) solid;
+}
+
+.filterTitle {
+  padding: 15px;
+}
+
+.btcmpsListHome {
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 70%;
+  height: 70%;
+  border: 0.5px rgb(255, 135, 105) solid;
+}
+
+.btcmpsCards {
+  margin-left: 70px;
+  display: flex;
+  flex-wrap: wrap;
+}

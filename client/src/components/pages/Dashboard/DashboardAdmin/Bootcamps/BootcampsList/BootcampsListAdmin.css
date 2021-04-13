@@ -1,0 +1,27 @@
+.srchBarAndAddBtcmp {
+  position: relative;
+  width: 1400px;
+  margin-left: 400px;
+}
+
+.srchBarBtcmp {
+  position: relative;
+  width: 955px;
+  margin-left: 200px;
+}
+
+.addBootcamp {
+  position: relative;
+  margin-left: 450px;
+  color: rgb(114, 250, 166);
+}
+
+.srchBarAndAddBtcmp {
+  display: flex;
+}
+
+.btcmpsList {
+  padding-left: 385px;
+  flex-wrap: wrap;
+  display: flex;
+}
