@@ -20,6 +20,10 @@ app.use('/',userRouter);
 
 const port = process.env.PORT || 2000
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'))
+}
+
 app.listen(port, (error) =>
     error
         ? console.log(error)

@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "cd backend && npx nodemon server",
-    "dev": "concurrently \"npm start \" \"cd client && npm start\""
+    "dev": "concurrently \"npm start \" \"cd client && npm start\"",
+    "build" : "cd client && npm run build",
+    "install-client" : "cd client && npm install",
+    "heroku-postbuild" : "npm run install-client && npm run build"
   },
   "author": "Majd LEFI",
   "license": "ISC",
