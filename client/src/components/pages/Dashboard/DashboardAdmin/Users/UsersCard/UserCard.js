@@ -45,7 +45,14 @@ function UserCard({ user, _id }) {
               {" "}
               <i class="far fa-trash-alt"></i>
             </Button>
-            <EditUser/>
+            <EditUser
+              oldUser={{
+                firstName: user.firstName,
+                lastName: user.lastName,
+                email: user.email
+              }}
+              _id={user._id}
+            />
             {/* <Button>
               <i class="fas fa-edit"></i>
             </Button> */}

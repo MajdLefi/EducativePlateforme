@@ -21,6 +21,15 @@ function Navbar() {
   return (
     <div className="navBarContainer">
       <header className="headerContainer">
+        <div className="logo">
+          <Link to={{ pathname: "/" }}>
+            <img
+              width="80px"
+              height="80px"
+              src="https://upload.wikimedia.org/wikipedia/fr/a/ad/Logo_Ed.png"
+            />
+          </Link>
+        </div>
         <nav className="navbarItems">
           <ul>
             <Link to={{ pathname: "/Bootcamps" }}>

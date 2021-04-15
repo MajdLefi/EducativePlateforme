@@ -52,10 +52,8 @@ const BootcampsCardAdmin = ({ bootcamp, _id }) => {
           <CardSubtitle tag="h6" className="descBtcmp">
             {bootcamp.description}
           </CardSubtitle>
-          <CardText>eee</CardText>
           <div>
-            {/* <EditBootcamp/> */}
-            <div className="btnsUserContainer">
+            <div className="btnsUserContainerB">
               <Button
                 onClick={() => removeBootcamp(bootcamp._id)}
                 className="deleteUserBtn"
@@ -63,9 +61,14 @@ const BootcampsCardAdmin = ({ bootcamp, _id }) => {
                 {" "}
                 <i class="far fa-trash-alt"></i>
               </Button>
-              <Button>
-                <i class="fas fa-edit"></i>
-              </Button>
+              <EditBootcamp
+                oldBootcamp={{
+                  title: bootcamp.title,
+                  description: bootcamp.description,
+                  image: bootcamp.image,
+                }}
+                _id={bootcamp._id}
+              />
             </div>
           </div>
         </CardBody>

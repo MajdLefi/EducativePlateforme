@@ -1,0 +1,17 @@
+.add-edit-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
+  
+  .add-edit-form > input {
+    outline: 0;
+    margin: 0 0 10px 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.246);
+  }
+
+.btnEditModal {
+    margin-right: 10px;
+}

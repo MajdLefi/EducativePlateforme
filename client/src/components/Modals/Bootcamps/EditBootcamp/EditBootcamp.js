@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
+import { Button } from "reactstrap";
 
 import { editBootcamp } from "../../../../js/actions/bootcampActions";
 import "./EditBootcamp.css";
@@ -30,7 +31,7 @@ const customStyles = {
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement("#root");
 
-function EditBootcamp({ _id }) {
+function EditBootcamp({ oldBootcamp, _id }) {
   const dispatch = useDispatch();
   const editBootcamps = (id, formData) => dispatch(editBootcamp(id, formData));
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -41,13 +42,8 @@ function EditBootcamp({ _id }) {
   });
 
   useEffect(() => {
-    setForm({
-      title: "",
-      description: "",
-      image: "",
-    });
-  }, [modalIsOpen]);
-
+    setForm(oldBootcamp);
+  }, [modalIsOpen, oldBootcamp]);
   function openModal() {
     setIsOpen(true);
   }
@@ -67,15 +63,18 @@ function EditBootcamp({ _id }) {
   };
   return (
     <React.Fragment>
-      <i className="fas fa-plus add-btn" onClick={openModal} />
+      <Button>
+        <i class="fas fa-edit" onClick={openModal}></i>
+      </Button>
+
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
       >
-        <h2> ediiit</h2>
+        <h2>Edit bootcamp</h2>
         <form onSubmit={handleSubmit} className="add-edit-form">
-          <label>NAME</label>
+          <label>Title</label>
           <input
             onChange={handleChange}
             value={form.title}
@@ -84,7 +83,7 @@ function EditBootcamp({ _id }) {
             placeholder="Enter your name..."
             required
           />
-          <label>LAST NAME</label>
+          <label>Description</label>
           <input
             onChange={handleChange}
             value={form.description}
@@ -93,7 +92,7 @@ function EditBootcamp({ _id }) {
             placeholder="Enter your last name name..."
             required
           />
-          <label>EMAIL</label>
+          <label>Image</label>
           <input
             onChange={handleChange}
             value={form.image}

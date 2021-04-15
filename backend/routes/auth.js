@@ -23,7 +23,7 @@ const {
 //@access Public
 
 router.post("/register", registerRules(), validator, async (req, res) => {
-  const { firstName, lastName, email, password,role } = req.body;
+  const { firstName, lastName, email, password,role, } = req.body;
   try {
     //simple Validation
     // if (!name || !lastName || !email || !password) {

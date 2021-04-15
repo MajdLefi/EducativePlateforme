@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const Bootcamp = require("../models/Bootcamp");
 
 exports.getAllUsers = async (req, res) => {
   try {
@@ -21,7 +22,7 @@ exports.getCurrent = async (req, res) => {
 };
 
 exports.addUser = async (req, res) => {
-  const { firstName, lastName, email, password, role } = req.body;
+  const { firstName, lastName, email, password, role, myBootcamps } = req.body;
   try {
     let user = await User.findOne({ email });
     if (user) {
@@ -32,7 +33,9 @@ exports.addUser = async (req, res) => {
       lastName,
       email,
       password,
-      role
+      role,
+      myBootcamps,
+      //imgProfile
     });
     const salt = 10; //hash level
     const hashedPassword = await bcrypt.hash(password, salt); //hash password
@@ -77,4 +80,38 @@ exports.deleteUser = (req, res) => {
       res.send(user);
     })
     .catch((err) => res.status(400).send({ msg: "Error Remove user " }));
+};
+
+exports.followingBootcamp = async (req, res) => {
+  const _id = req.params._id;
+  const userID = req.params.userID;
+  console.log(_id);
+  try {
+    const bootcamp = await Bootcamp.findById(_id);
+    const user = await User.findByIdAndUpdate(
+      userID,
+      { $push: { myBootcamps: bootcamp } },
+      { new: true }
+    );
+    res.json({ user });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+exports.unfollowingBootcamp = async (req, res) => {
+  const _id = req.params._id;
+  const userID = req.params.userID;
+  console.log(_id);
+  try {
+    const bootcamp = await Bootcamp.findById(_id);
+    const user = await User.findByIdAndUpdate(
+      userID,
+      { $pull: { myBootcamps: bootcamp } },
+      { new: true }
+    );
+    res.json({ user });
+  } catch (error) {
+    console.log(error);
+  }
 };

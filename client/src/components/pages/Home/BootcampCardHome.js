@@ -6,7 +6,7 @@ function BootcampCardHome({ bootcamp }) {
       <div className="imgCard">
         <img
           className="imgPerson"
-          height="150px"
+          height="100px"
           width="100px"
           src={bootcamp.image}
         />

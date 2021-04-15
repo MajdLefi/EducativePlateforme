@@ -5,7 +5,8 @@ import {
     REGISTER_USER,
     LOGOUT_USER,
     GET_AUTH_USER,
-    AUTH_ERRORS
+    AUTH_ERRORS,
+    ADD_USER
 } from '../constants/actionsTypes'
 
 //set the user loading
@@ -16,28 +17,13 @@ const userLoading = (dispatch) => {
 }
 
 //register 
-export const registerUser = (formData) => async dispatch => {
-    dispatch(userLoading)
-    try {
-        const res = await axios.post('/api/auth/register', formData);
-        dispatch({
-            type: REGISTER_USER,
-            payload: res.data, //{ msg: 'User registred with success', user, token }
-        })
-    } catch (error) {
-        console.dir(error);
+export const registerUser = (newUser) => async (dispatch) => {
+    await axios
+      .post("/user/add_user", newUser)
+      .then((res) => dispatch({ type: ADD_USER, payload: res.data }))
+      .catch((err) => console.log(err));
+  };
 
-        const { errors, msg } = error.response.data;
-
-        if (Array.isArray(errors)) {
-            errors.forEach((err) => alert(err.msg));
-        }
-        console.log(errors);
-        if (msg) {
-            alert(msg);
-        }
-    }
-}
 
 //login
 

@@ -76,47 +76,37 @@ function AddBootcamp() {
         onRequestClose={closeModal}
         style={customStyles}
       >
-        <h2>"ADD BTCMP"</h2>
+        <h2>"New bootcamp"</h2>
         <form onSubmit={handleSubmit} className="add-edit-form">
-          <label>NAME</label>
+          <label>Title</label>
           <input
             onChange={handleChange}
-            value={form.firstName}
-            name="firstName"
+            value={form.title}
+            name="title"
             type="text"
-            placeholder="Enter your name..."
+            placeholder="Title..."
             required
           />
-          <label>LAST NAME</label>
+          <label>Description</label>
           <input
             onChange={handleChange}
-            value={form.lastName}
-            name="lastName"
+            value={form.description}
+            name="description"
             type="text"
-            placeholder="Enter your last name name..."
+            placeholder="Description..."
             required
           />
-          <label>EMAIL</label>
+          <label>Image</label>
           <input
             onChange={handleChange}
-            value={form.email}
-            name="email"
-            type="email"
-            placeholder="Enter your email..."
+            value={form.image}
+            name="image"
+            type="text"
+            placeholder="Image..."
             required
-          />
-          <label>password</label>
-          <input
-            onChange={handleChange}
-            value={form.password}
-            name="password"
-            type="tel"
-            pattern="[0-9]{8,}"
-            required
-            placeholder="Enter your phone..."
           />
           <div>
-            <button type="submit">Confirm</button>
+            <button type="submit"className="btnEditModal">Confirm</button>
             <button onClick={closeModal}>Cancel</button>
           </div>
         </form>

@@ -29,7 +29,7 @@ const customStyles = {
 
 Modal.setAppElement("#root");
 
-function EditUser() {
+function EditUser({ oldUser, _id }) {
   const dispatch = useDispatch();
   const editUserById = (id, formData) => dispatch(editUser(id, formData));
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -41,14 +41,8 @@ function EditUser() {
   });
 
   useEffect(() => {
-    setForm({
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      role: "Student",
-    });
-  }, [modalIsOpen]);
+    setForm(oldUser);
+  }, [modalIsOpen, oldUser]);
 
   function openModal() {
     setIsOpen(true);
@@ -64,16 +58,19 @@ function EditUser() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    editUserById(form);
+    editUserById(_id, form);
     closeModal();
   };
 
   return (
     <div>
       <React.Fragment>
-        <Button color="warning" className="editModal" onClick={openModal}>
-          Edit
+        <Button onClick={openModal}>
+          <i class="fas fa-edit"></i>
         </Button>
+        {/* <Button color="warning" className="editModal" onClick={openModal}>
+          Edit
+        </Button> */}
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
@@ -81,7 +78,7 @@ function EditUser() {
         >
           <h2>USER</h2>
           <form onSubmit={handleSubmit} className="add-edit-form">
-            <label>NAME</label>
+            <label>First name</label>
             <input
               onChange={handleChange}
               value={form.firstName}
@@ -90,7 +87,7 @@ function EditUser() {
               placeholder="Enter your name..."
               required
             />
-            <label>LAST NAME</label>
+            <label>Last name</label>
             <input
               onChange={handleChange}
               value={form.lastName}
@@ -99,7 +96,7 @@ function EditUser() {
               placeholder="Enter your last name name..."
               required
             />
-            <label>EMAIL</label>
+            <label>Email</label>
             <input
               onChange={handleChange}
               value={form.email}
@@ -108,18 +105,8 @@ function EditUser() {
               placeholder="Enter your email..."
               required
             />
-            <label>password</label>
-            <input
-              onChange={handleChange}
-              value={form.password}
-              name="password"
-              type="tel"
-              pattern="[0-9]{8,}"
-              required
-              placeholder="Enter your phone..."
-            />
             <div>
-              <button type="submit">Confirm</button>
+              <button type="submit" className="btnEditModal">Confirm</button>
               <button onClick={closeModal}>Cancel</button>
             </div>
           </form>

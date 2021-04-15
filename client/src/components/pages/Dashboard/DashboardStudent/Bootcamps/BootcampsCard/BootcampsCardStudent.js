@@ -9,13 +9,27 @@ import {
   CardSubtitle,
   Button,
 } from "reactstrap";
-import { followBootcamp } from "../../../../../../js/actions/userActions";
-import { getBootcamps } from "../../../../../../js/actions/bootcampActions";
+import {
+  getBootcamps,
+  followBootcamp,
+  unfollowBootcamp,
+} from "../../../../../../js/actions/bootcampActions";
+
+import {
+  getUsers,
+  likeBootcamp,
+  unlikeBootcamp,
+} from "../../../../../../js/actions/userActions";
 import "./BootcampsCardStudent.css";
+import FollowBtn from "./FollowBtn";
 
 const BootcampsCardStudent = ({ bootcamp }) => {
   useEffect(() => {
     getBootcamps();
+  }, []);
+
+  useEffect(() => {
+    getUsers();
   }, []);
 
   const user = useSelector((state) => state.authReducer.user);
@@ -26,16 +40,18 @@ const BootcampsCardStudent = ({ bootcamp }) => {
 
   const handleFollow = () => {
     setFollowed(true);
-    dispatch(followBootcamp({}))
+    dispatch(likeBootcamp(user._id, bootcamp._id));
+    dispatch(followBootcamp(bootcamp._id, user._id));
   };
   const handleUnfollow = () => {
-    setFollowed(false);
+    dispatch(unlikeBootcamp(user._id, bootcamp._id));
+    dispatch(unfollowBootcamp(bootcamp._id, user._id));
   };
   return (
     <div className="cardsBtcmp">
       <Card className="BtcmpCardStudent">
         <CardImg
-        className="BtcmpImg"
+          className="BtcmpImg"
           src={bootcamp.image}
           alt="Card image cap"
         />
@@ -46,16 +62,20 @@ const BootcampsCardStudent = ({ bootcamp }) => {
           <CardSubtitle tag="h6" className="descBtcmp">
             {bootcamp.description}
           </CardSubtitle>
-          <CardText>{bootcamp.image}</CardText>
-          {followed ? (
-            <button className="btn btn-outline-danger" onClick={handleUnfollow}>
-              Unfollow
-            </button>
-          ) : (
-            <button className="btn btn-outline-info" onClick={handleFollow}>
-              Follow
-            </button>
-          )}
+          <div className="followBtnBtcmp">
+            {bootcamp.followers.find((el) => el._id === user._id) ? (
+              <button
+                className="btn btn-outline-danger"
+                onClick={handleUnfollow}
+              >
+                Unfollow
+              </button>
+            ) : (
+              <button className="btn btn-outline-info" onClick={handleFollow}>
+                Follow
+              </button>
+            )}
+          </div>
         </CardBody>
       </Card>
     </div>

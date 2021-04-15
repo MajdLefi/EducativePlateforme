@@ -13,8 +13,12 @@
   color: white;
 }
 
+.logo {
+  margin-left: 50px;
+}
+
 .navbarItems ul {
-  margin-left: 1500px;
+  margin-right: 70px;
   margin-top: 18px;
   display: flex;
   flex-direction: row;

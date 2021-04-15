@@ -16,3 +16,10 @@
   flex-wrap: wrap;
   display: flex;
 }
+
+.btnsUserContainerB {
+  align-content: center;
+  justify-content: center;
+  margin-left: 90px;
+  margin-top: 40px;
+}

@@ -6,6 +6,8 @@ import {
   ADD_USER,
 } from "../constants/actionsTypes";
 
+import {getBootcamps} from "../actions/bootcampActions"
+
 export const getUsers = () => async (dispatch) => {
   await axios
     .get("/users")
@@ -33,12 +35,12 @@ export const addUser = (newUser) => async (dispatch) => {
 };
 
 export const editUser = (id, formData) => async (dispatch) => {
-  try {
-    await axios.put(`/users/${id}`, formData);
-    dispatch(getUsers());
-  } catch (error) {
-    console.error(error);
-  }
+  await axios
+    .put(`/users/${id}`, formData)
+    .then((res) => dispatch(getUsers()))
+    .catch((err) => {
+      err.response.data = { msg: "Error to edit the user " };
+    });
 };
 
 export const deleteUser = (_id) => async (dispatch) => {
@@ -50,12 +52,16 @@ export const deleteUser = (_id) => async (dispatch) => {
     });
 };
 
-// export const followBootcamp=({ID,userID})=>dispatch=>{
-//   axios.put(`/myBootcamps/like`,{ID,userID})
-//   .then(res=>dispatch(getCurrentUser()))
-//  .catch(err=>console.log(err))
-//  }
+export const likeBootcamp = (idUser,idBootcamp) => async (dispatch) => {
+  axios
+    .put(`/user/like/${idUser}/${idBootcamp}`)
+    .then((res) => dispatch(getBootcamps()))
+    .catch((err) => console.log(err));
+};
 
-export const followBootcamp = ({ users }) => async (dispatch) => {
-  console.log(users);
+export const unlikeBootcamp = (idUser,idBootcamp) => async (dispatch) => {
+  axios
+    .put(`/user/unlike/${idUser}/${idBootcamp}`)
+    .then((res) => dispatch(getBootcamps()))
+    .catch((err) => console.log(err));
 };

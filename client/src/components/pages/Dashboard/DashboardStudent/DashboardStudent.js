@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState, Fragment } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import "./DashboardStudent.css";
 import SideBar from "../SideBar/SideBar";
 import NavBarDash from "../NavBar/NavBarDash";
@@ -7,6 +8,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "reactstrap";
 function DashboardStudent() {
+ 
   return (
     <div className="containerDashboard">
       <NavBarDash />
@@ -32,7 +34,7 @@ function DashboardStudent() {
               <i class="far fa-user-circle"></i> Dashboard
             </Link>
             <Link to="/dash/MyBootcamps">
-            <i class="fas fa-graduation-cap"></i> Bootcamps
+              <i class="fas fa-graduation-cap"></i> Bootcamps
             </Link>
           </nav>
         </div>

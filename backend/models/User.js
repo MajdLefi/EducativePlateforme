@@ -27,6 +27,7 @@ const userSchema = new Schema({
   imgProfile: {
     type: String,
   },
+  myBootcamps : [{}]
 });
 
 module.exports = User = mongoose.model("User", userSchema);

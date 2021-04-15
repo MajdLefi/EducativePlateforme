@@ -62,6 +62,16 @@ export const removeBootcamps = (_id) => async (dispatch) => {
     });
 };
 
-export const followBootcamp = () => async (dispatch) => {
-  console.log({});
+export const followBootcamp = (idBootcamp, idUser) => async (dispatch) => {
+  axios
+    .put(`/bootcamps/like/${idBootcamp}/${idUser}`)
+    .then((res) => dispatch(getBootcamps()))
+    .catch((err) => console.log(err));
+};
+
+export const unfollowBootcamp = (idBootcamp, idUser) => async (dispatch) => {
+  axios
+    .put(`/bootcamps/unlike/${idBootcamp}/${idUser}`)
+    .then((res) => dispatch(getBootcamps()))
+    .catch((err) => console.log(err));
 };

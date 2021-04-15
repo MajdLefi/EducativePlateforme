@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const {ObjectId} = mongoose.Schema.Types
+const { ObjectId } = mongoose.Schema.Types;
 const Schema = mongoose.Schema;
 
 const bootcampSchema = new Schema({
@@ -12,11 +12,9 @@ const bootcampSchema = new Schema({
   image: {
     type: String,
   },
-  followers: {
-    type: [{}],
-    default: [],
-  },
-
+  followers: [{
+    
+  }],
 });
 
 module.exports = Bootcamp = mongoose.model("Bootcamp", bootcampSchema);

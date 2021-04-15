@@ -30,24 +30,45 @@
 }
 
 .dashboardCards {
-  display: inline-block;
-  border: 2px crimson solid;
+  display: flex;
   margin-left: 500px;
   width: 1000px;
   height: 400px;
 }
 
+.editAndName {
+  padding-top: 70px;
+  padding-left: 50px;
+  display: flex;
+  width: 300px;
+}
+
+.fullNameTxt {
+  padding-top: 5px;
+  padding-right: 15px;
+}
+
 .studentsCard {
+  border: rgb(80, 79, 79) 2px solid ;
   border-radius: 100%;
-  margin: 30px;
-  border: 2px rgb(100, 220, 20) solid;
+  margin-left: 330px;
   width: 200px;
   height:200px;
 }
 
 .bootcampsCard {
   margin: 30px;
-  border: 2px rgb(20, 83, 220) solid;
   width: 400px;
   height: 70px;
+}
+
+.followedBtcmpContainer {
+  display: flex;
+  margin-left: 500px;
+  width: 1000px;
+  height: 400px;
+}
+
+.titleBtcmpContainer {
+  padding-left: 900px
 }

@@ -74,19 +74,53 @@ exports.deleteBootcamp = async (req, res) => {
 
 //likes
 exports.followBootcamp = async (req, res) => {
-  const { ID, userID } = req.body;
-  //const { userID } = req.body;
-  const favBook = await Bootcamp.findById(req.body.ID);
-  const liker = await User.findById(req.body.userID);
-  const tab = liker.favorite;
+  const _id = req.params._id;
+  const userID = req.params.userID;
+  console.log(userID);
   try {
-    if (req.body.userID) {
-      await User.findByIdAndUpdate(req.body.userID, {
-        $push: { myBootcamps: req.body.ID },
-      });
-    } else null;
+    const user = await User.findById(userID);
+    const bootcamp = await Bootcamp.findByIdAndUpdate(
+      _id,
+      { $push: { followers: user } },
+      { new: true }
+    );
+    res.json({ bootcamp });
   } catch (error) {
     console.log(error);
   }
-  res.status(200).json(req.body.ID);
 };
+
+exports.unfollowBootcamp = async (req, res) => {
+  const _id = req.params._id;
+  const userID = req.params.userID;
+  console.log(userID);
+  try {
+    const user = await User.findById(userID);
+    const bootcamp = await Bootcamp.findByIdAndUpdate(
+      _id,
+      { $pull: { followers: user } },
+      { new: true }
+    );
+    res.json({ bootcamp });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// exports.followBootcamp = async (req, res) => {
+//   const { ID, userID } = req.body;
+//   //const { userID } = req.body;
+//   const favBook = await Bootcamp.findById(req.body.ID);
+//   const liker = await User.findById(req.body.userID);
+//   const tab = liker.favorite;
+//   try {
+//     if (req.body.userID) {
+//       await User.findByIdAndUpdate(req.body.userID, {
+//         $push: { myBootcamps: req.body.ID },
+//       });
+//     } else null;
+//   } catch (error) {
+//     console.log(error);
+//   }
+//   res.status(200).json(req.body.ID);
+// };

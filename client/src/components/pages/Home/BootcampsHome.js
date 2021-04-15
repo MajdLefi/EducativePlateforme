@@ -29,7 +29,7 @@ function BootcampsHome() {
       <div className="btcmpsListContainer">
         <div className="filtersContainer">
           <h4 className="filterTitle">Filters</h4>
-          <i class="fas fa-sliders-h"></i>
+          {/* <i class="fas fa-sliders-h"></i>
           <FormGroup check className="checkContainer">
             <Label check>
               <Input type="checkbox" /> Check me out
@@ -40,7 +40,7 @@ function BootcampsHome() {
               <Input type="checkbox" /> Check me out
               <Input type="checkbox" /> Check me out
             </Label>
-          </FormGroup>
+          </FormGroup> */}
         </div>
 
         <div className="btcmpsListHome">
@@ -54,14 +54,16 @@ function BootcampsHome() {
       <div className="footerContainer">
         <div className="aboutUsContainer">
           <div className="logoAndDesc">
-            <img className="imgFooter" src="" alt="here" />
+          <img
+              width="80px"
+              height="80px"
+              src="https://upload.wikimedia.org/wikipedia/fr/a/ad/Logo_Ed.png"
+              alt="here"
+            />
             <p>
-              Study.tn est une plateforme en ligne spécialisée dans la vente
-              <br /> de cours en vidéo. Grâce à Study.tn, vous allez pouvoir
-              <br /> apprendre tout ce que vous voulez et celà peu importe où
-              vous
-              <br /> use the br
-              <br /> element.
+              Ed.tn est une plateforme en ligne spécialisée dans la vente
+              <br /> de cours en vidéo. Grâce à Ed.tn, vous allez pouvoir
+              <br /> apprendre tout ce que vous voulez et celà peu importe où vous
             </p>
 
             <div className="followUsFooter">

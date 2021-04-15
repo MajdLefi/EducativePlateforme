@@ -33,31 +33,15 @@ function Home() {
           <Carousel>
             <Carousel.Item>
               <img className="d-block w-100" src={img11} alt="First slide" />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
+              <Carousel.Caption></Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img className="d-block w-100" src={img12} alt="Second slide" />
-
-              <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </Carousel.Caption>
+              <Carousel.Caption></Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img className="d-block w-100" src={img13} alt="Third slide" />
-
-              <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur.
-                </p>
-              </Carousel.Caption>
+              <Carousel.Caption></Carousel.Caption>
             </Carousel.Item>
           </Carousel>
           <div className="btnBtcmpHome">
@@ -75,28 +59,28 @@ function Home() {
         </div>
         <div className="reviewCards">
           <div className="reviewCard">
-            <p>hhhhh</p>
+            <p>Mayssa</p>
             <div className="imgReviewContainer"></div>
             <img className="imgReview" src={imgReview2} alt="" />
-            <p>hhhhhhhhhhhhhhhhhh</p>
+            <p>Thnxx a lot ! </p>
           </div>
           <div className="reviewCard">
-            <p>hhhhh</p>
+            <p>Karim</p>
             <div className="imgReviewContainer"></div>
             <img className="imgReview" src={imgReview1} alt="" />
-            <p>hhhhhhhhhhhhhhhhhh</p>
+            <p>Now I am a junior freelancer :D</p>
           </div>
           <div className="reviewCard">
-            <p>hhhhh</p>
+            <p>Rima</p>
             <div className="imgReviewContainer"></div>
             <img className="imgReview" src={imgReview3} alt="" />
-            <p>hhhhhhhhhhhhhhhhhh</p>
+            <p>It's a new experience for me !</p>
           </div>
           <div className="reviewCard">
-            <p>hhhhh</p>
+            <p>Amin</p>
             <div className="imgReviewContainer"></div>
             <img className="imgReview" src={imgReview4} alt="" />
-            <p>hhhhhhhhhhhhhhhhhh</p>
+            <p>Thank youuu Ed.tn !!</p>
           </div>
         </div>
       </div>
@@ -136,17 +120,16 @@ function Home() {
         <div className="aboutUsContainer">
           <div className="logoAndDesc">
             <img
-              className="imgFooter"
-              src=""
+              width="80px"
+              height="80px"
+              src="https://upload.wikimedia.org/wikipedia/fr/a/ad/Logo_Ed.png"
               alt="here"
             />
             <p>
-              Study.tn est une plateforme en ligne spécialisée dans la vente
-              <br /> de cours en vidéo. Grâce à Study.tn, vous allez pouvoir
+              Ed.tn est une plateforme en ligne spécialisée dans la vente
+              <br /> de cours en vidéo. Grâce à Ed.tn, vous allez pouvoir
               <br /> apprendre tout ce que vous voulez et celà peu importe où
               vous
-              <br /> use the br
-              <br /> element.
             </p>
 
             <div className="followUsFooter">
@@ -178,10 +161,10 @@ function Home() {
           <div className="contactUsIcons">
             <ul>
               <li>
-                <i class="fas fa-mobile-alt">   +216 51 80 08 38</i>
+                <i class="fas fa-mobile-alt"> +216 51 80 08 38</i>
               </li>
               <li>
-                <i class="far fa-envelope">   contact@study.tn</i>
+                <i class="far fa-envelope"> contact@study.tn</i>
               </li>
             </ul>
           </div>

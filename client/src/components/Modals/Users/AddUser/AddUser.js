@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { Button } from "reactstrap";
 import { useDispatch } from "react-redux";
-import { addUser, editUser } from "../../../../js/actions/userActions";
+import { addUser } from "../../../../js/actions/userActions";
 import "./AddUser.css";
 
 const customStyles = {
@@ -33,7 +33,6 @@ Modal.setAppElement("#root");
 function AddUser({ oldUser, _id }) {
   const dispatch = useDispatch();
   const addNewStudent = (formData) => dispatch(addUser(formData));
-  const editUserById = (id, formData) => dispatch(editUser(id, formData));
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [form, setForm] = useState({

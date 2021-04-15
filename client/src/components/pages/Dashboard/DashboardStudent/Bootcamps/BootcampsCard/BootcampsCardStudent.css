@@ -5,6 +5,7 @@
 }
 
 .BtcmpCardStudent {
+  height: 300px;
   width: 300px;
   margin: 15px;
 }
@@ -23,4 +24,8 @@
 .btn-outline-danger,
 .btn-outline-info {
   width: 100px;
+}
+
+.followBtnBtcmp {
+  margin-top: 50px;
 }
