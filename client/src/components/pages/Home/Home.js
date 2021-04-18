@@ -90,27 +90,27 @@ function Home() {
         </div>
         <div className="followUsItems">
           <ul>
-            <li>
-              <a href="#">
-                <i class="fab fa-facebook-f" id="iconFb"></i>
+            <li className="iconFb">
+              <a href="facebook.com">
+                <i class="fab fa-facebook-f"></i>
               </a>
             </li>
 
-            <li>
-              <a href="#">
+            <li className="iconTw">
+              <a href="twitter.com">
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
 
-            <li>
-              <a href="#">
-                <i class="fab fa-linkedin-in" id="iconLink"></i>
+            <li className="iconLink">
+              <a href="linkedin.com">
+                <i class="fab fa-linkedin-in"></i>
               </a>
             </li>
 
-            <li>
-              <a href="#">
-                <i class="fab fa-youtube" id="iconYou"></i>
+            <li className="iconYou">
+              <a href="youtube.com">
+                <i class="fab fa-youtube"></i>
               </a>
             </li>
           </ul>

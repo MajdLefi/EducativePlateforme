@@ -183,6 +183,22 @@
   font-size: 40px;
 }
 
+.iconFb:hover {
+  background: #3b5999;
+}
+
+.iconTw:hover {
+  background: #55acee;
+}
+
+.iconLink:hover {
+  background: #0077b5;
+}
+
+.iconYou:hover {
+  background: #cd201f;
+}
+
 /* .followUcItems ul li:nth-child(1) {
   background: #3b5999;
 }
@@ -200,7 +216,7 @@
 } */
 
 .footerContainer {
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, 0.7);
   margin-top: 20px;
   height: 450px;
   background-color: #121921;
@@ -239,10 +255,10 @@
 .contactUsFooterContainer {
   margin: 150px;
   padding-top: 150px;
-} 
+}
 .contactUsFooterContainer li {
   list-style: none;
-} 
+}
 
 .contactUsText {
   color: #fff;
