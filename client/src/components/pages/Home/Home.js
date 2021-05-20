@@ -11,13 +11,14 @@ import imgReview2 from "../../../images/imgReview2.png";
 import imgReview3 from "../../../images/imgReview3.png";
 import imgReview4 from "../../../images/imgReview4.png";
 import "./Home.css";
+
 function Home() {
   return (
     <div className="homeContainer">
       <Navbar />
       <div className="homebg flex-center">
-        <h2 className="homeSlogan">Welcome to our website</h2>
-        <p className="homeDesc">Boost your skills!</p>
+        <h2 className="homeSlogan">Welcome to surf.tn</h2>
+        <p className="homeDesc">Where you Boost your skills!</p>
       </div>
       <div className="sloganContainer flex-center2">
         <h4>Trends</h4>
@@ -27,7 +28,7 @@ function Home() {
       <div className="carouselContainer">
         <div className="btcmpText">
           <h2>Bootcamps to switch your career ! </h2>
-          <p>Description..</p>
+          {/* <p>Description..</p> */}
         </div>
         <div className="carouselHome">
           <Carousel>
@@ -80,7 +81,7 @@ function Home() {
             <p>Amin</p>
             <div className="imgReviewContainer"></div>
             <img className="imgReview" src={imgReview4} alt="" />
-            <p>Thank youuu Ed.tn !!</p>
+            <p>Thank youuu surf.tn !!</p>
           </div>
         </div>
       </div>
@@ -119,17 +120,16 @@ function Home() {
       <div className="footerContainer">
         <div className="aboutUsContainer">
           <div className="logoAndDesc">
-            <img
+            {/* <img
               width="80px"
               height="80px"
               src="https://upload.wikimedia.org/wikipedia/fr/a/ad/Logo_Ed.png"
               alt="here"
-            />
+            /> */}
             <p>
-              Ed.tn est une plateforme en ligne spécialisée dans la vente
-              <br /> de cours en vidéo. Grâce à Ed.tn, vous allez pouvoir
-              <br /> apprendre tout ce que vous voulez et celà peu importe où
-              vous
+              surf.tn is an an educational plateforme
+              <br />You will enjoy the IT bootcamps, workshops and hackathons with us
+              <br />We are a young startup based in Tunisia ! 
             </p>
 
             <div className="followUsFooter">

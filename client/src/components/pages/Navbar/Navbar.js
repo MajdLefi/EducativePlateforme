@@ -2,7 +2,7 @@ import React, { useState, Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-
+import logonew3 from '../../../assets/logonew3.png';
 function Navbar() {
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
@@ -23,11 +23,7 @@ function Navbar() {
       <header className="headerContainer">
         <div className="logo">
           <Link to={{ pathname: "/" }}>
-            <img
-              width="80px"
-              height="80px"
-              src="https://upload.wikimedia.org/wikipedia/fr/a/ad/Logo_Ed.png"
-            />
+            {/* <img src={logonew3} height="60px"/> */}
           </Link>
         </div>
         <nav className="navbarItems">

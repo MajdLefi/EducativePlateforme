@@ -14,6 +14,7 @@ import {
 } from "reactstrap";
 import AddBootcamp from "../../../../../Modals/Bootcamps/AddBootcamp/AddBootcamp";
 import "./BootcampsListAdmin.css";
+
 const BootcampsAdmin = () => {
   const dispatch = useDispatch();
   useEffect(() => {

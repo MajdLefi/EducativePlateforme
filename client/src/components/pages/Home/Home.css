@@ -122,14 +122,15 @@
   width: 400px;
   height: 200px;
   margin: 15px;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: white;
 }
 
 .imgReview {
+  border-color: #121921;
   padding-left: 15px;
-  width: 140px;
-  height: 110px;
+  width: 135px;
+  height: 120px;
   border-radius: 250px;
 }
 

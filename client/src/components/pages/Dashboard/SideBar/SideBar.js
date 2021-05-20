@@ -1,9 +1,27 @@
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../../../js/actions/authActions";
 import "./SideBar.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Container,
+} from "reactstrap";
+//https://github.com/MajdLefi/EducativePlateforme.git
 const SideBar = () => {
+  const dispatch = useDispatch();
+  const isAuth = useSelector((state) => state.authReducer.isAuth);
+  const user = useSelector((state) => state.authReducer.user);
+  const logoutUser = () => {
+    dispatch(logout());
+  };
   return (
     <motion.div className="sideBarDash">
       <div className="logoContainer">
@@ -31,6 +49,9 @@ const SideBar = () => {
           <Link to="/dash/bootcamps">
             <i class="fas fa-graduation-cap"></i> Bootcamps
           </Link>
+          <NavLink href="/" onClick={logoutUser}>
+            <i class="fas fa-sign-out-alt"></i> Log out
+          </NavLink>
         </nav>
       </div>
     </motion.div>

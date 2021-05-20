@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd backend && npx node server",
-    "backend" : "cd backend && npx nodemon server",
-    "dev": "concurrently \"npm run backend \" \"npm run start --prefix client\"",
-    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "start": "cd backend && npx nodemon server",
+    "dev": "concurrently \"npm start \" \"cd client && npm start\""
+
   },
   "author": "Majd LEFI",
   "license": "ISC",
